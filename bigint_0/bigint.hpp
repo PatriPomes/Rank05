@@ -26,11 +26,25 @@ public:
     bigint operator++();
     bigint operator++(int);
 
-    bigint &operator<<=(int num);
-    bigint operator<<(int num) const;
+    // shift with num
+    bigint operator<<(unsigned int n) const;
+    bigint operator>>(unsigned int n) const;
+    bigint &operator<<=(unsigned int n);
+    bigint &operator>>=(unsigned int n);
 
-    bigint &bigint::operator>>(unsigned num) const;
-    bigint &operator>>=(const bigint &num);
+    // shift with object
+    bigint operator<<(const bigint &other) const;
+    bigint operator>>(const bigint &other) const;
+    bigint &operator<<=(const bigint &other);
+    bigint &operator>>=(const bigint &other);
+
+    // ==, !=, <, >, <=, >=
+    bool operator==(const bigint &other) const;
+    bool operator!=(const bigint &other) const;
+    bool operator<(const bigint &other) const;
+    bool operator>(const bigint &other) const;
+    bool operator<=(const bigint &other) const;
+    bool operator>=(const bigint &other) const;
 };
 
 std::ostream &operator<<(std::ostream &output, const bigint &obj);
