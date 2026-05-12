@@ -15,7 +15,7 @@ public:
     bigint();
     bigint(unsigned int num);
     bigint(const bigint &obj);
-    bigint operator=(const bigint &obj);
+    bigint &operator=(const bigint &obj);
     std::string getStr() const;
 };
 
