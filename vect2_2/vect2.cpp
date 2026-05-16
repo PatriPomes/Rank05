@@ -115,3 +115,32 @@ vect2 operator*(int num, const vect2 &obj)
     tmp *= num;
     return tmp;
 }
+
+vect2 vect2::operator-(const vect2 &obj) const
+{
+    vect2 tmp(*this);
+    tmp._x = _x - obj._x;
+    tmp._y = _y - obj._y;
+    return tmp;
+}
+
+vect2 &vect2::operator-()
+{
+    _x = -_x;
+    _y = -_y;
+    return *this;
+}
+
+bool vect2::operator==(const vect2 &obj)
+{
+    if ((_x == obj._x) && (_y == obj._y))
+        return true;
+    return false;
+}
+
+bool vect2::operator!=(const vect2 &obj)
+{
+    if ((_x  == obj._x) && (_y == obj._y))
+        return false;
+    return true;
+}

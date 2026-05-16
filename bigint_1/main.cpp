@@ -19,26 +19,27 @@ int main(void)
 
     std::cout << YELLOW << "++++ ADD OBJECTS ++++" << RESET << std::endl;
 
-    std::cout << "a + b = " << a + b << std::endl;
-    std::cout << "a + c = " << a + c << std::endl;
-    std::cout << "(c += a) = " << (c += a) << std::endl;
+    std::cout << "a + b = " << a + b << std::endl; //63
+    std::cout << "a + c = " << a + c << std::endl; //42
+    std::cout << "(c += a) = " << (c += a) << std::endl; //42
     std::cout << std::endl;
 
     std::cout << BLUE << "++++ INCREMENT OBJECTS ++++" << RESET << std::endl;
-    std::cout << "b = " << b << std::endl;
-    std::cout << "++b = " << ++b << std::endl;
-    std::cout << "b++ = " << b++ << std::endl;
-    std::cout << "b = " << b << std::endl;
+    std::cout << "b = " << b << std::endl; //21
+    std::cout << "++b = " << ++b << std::endl; //22
+    std::cout << "b++ = " << b++ << std::endl; //22 
+    std::cout << "b = " << b << std::endl; //23
     std::cout << std::endl;
 
     std::cout << YELLOW << "++++ << OPERAND ++++" << RESET << std::endl;
     // // b = 23, b << 10 -> 23000000000 + 42 = 23000000042
     std::cout << "(b << 10): " << (b << 10) << std::endl;
     std::cout << "(b << 10) + 42 = " << ((b << 10) + 42) << std::endl;
-    std::cout << "(d <<= 4) = " << (d <<= 4) << ", d: " << d << std::endl;
+
     std::cout << std::endl;
 
     std::cout << BLUE << "++++ <<= OBJECTS ++++" << RESET << std::endl;
+    std::cout << "(d <<= 4) = " << (d <<= 4) << ", d: " << d << std::endl;
     std::cout << "(d >>= 2) = " << (d >>= (const bigint)2) << ", d: " << d << std::endl;
     std::cout << std::endl;
 

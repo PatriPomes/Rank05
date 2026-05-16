@@ -30,7 +30,13 @@ public:
     vect2 operator*=(int num);
 
     vect2 operator+(const vect2 &obj) const;
+    vect2 operator-(const vect2 &obj) const;
+    vect2 &operator-();
     vect2 operator*(int num) const;
+
+    bool operator==(const vect2 &obj);
+    bool operator!=(const vect2 &obj);
+    
 };
 
 vect2 operator*(int num, const vect2 &obj);
