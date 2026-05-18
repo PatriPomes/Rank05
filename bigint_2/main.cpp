@@ -45,7 +45,7 @@ int main(void)
 
     std::cout << YELLOW << "++++ = OPERAND ++++" << RESET << std::endl;
     std::cout << "a = " << a << std::endl; // a = 42
-    std::cout << "d = " << d << std::endl; // d = 5348
+    std::cout << "d = " << d << std::endl; // d = 133700
     std::cout << std::endl;
 
     std::cout << BLUE << "++++ OTHER OPERANDS ++++" << RESET << std::endl;
